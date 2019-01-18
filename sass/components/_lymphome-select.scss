@@ -1,0 +1,164 @@
+.lymphome-select {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+        margin-left: 25px;
+        width: auto;
+    }
+
+    &__active {
+        background-color: #fff;
+        border-radius: 50px;
+        padding: 9px;
+        display: flex;
+        position: relative;
+        padding-right: 50px;
+        cursor: pointer;
+
+        &::after {
+            right: 25px;
+            top: 45%;
+            content: '';
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 5px 0 5px;
+            border-color: #4d6b7c transparent transparent transparent;
+        }
+    }
+
+    &__circle {
+        background-color: $primary;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        display: block;
+        flex: 0 0 auto;
+    }
+
+    &__title {
+        line-height: 36px;
+        font-size: 1rem;
+        padding-left: 18px;
+        padding-left: 18px;
+
+        // padding-right: 40px;
+        color: #4d6b7c;
+        font-weight: bold;
+    }
+
+    &__list {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+
+        border-radius: 25px;
+        box-shadow: 0 4px 34px 0 rgba(0, 0, 0, 0.1);
+        display: flex;
+        width: 100%;
+
+        @include media-breakpoint-up(lg) {
+            width: 450px;
+        }
+
+        ul {
+            @include list-unstyled();
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        display: none;
+
+        &--is-visible {
+            display: block;
+        }
+    }
+
+    &__item {
+        background-color: #ffffff;
+
+        &:first-child {
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+        }
+
+        &:last-child {
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+
+        padding: 12px 18px;
+
+        &:hover {
+            background-color: $thrid;
+        }
+
+        a {
+            line-height: 42px;
+            display: flex;
+            color: $title-color;
+            width: 100%;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &-circle {
+            background-color: $primary;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            display: block;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 20px;
+            flex: 0 0 auto;
+
+            span {
+                color: white;
+                font-size: 0.6875rem;
+                font-weight: bold;
+                font-family: 'PT Serif', sans-serif;
+            }
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $thrid;
+        }
+
+        &--back {
+            span {
+                line-height: 42px;
+                color: $title-color;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &--overview {
+        margin-left: 0;
+
+        .lymphome-select__active {
+            background-color: transparent;
+            padding: 0;
+            padding-right: 15px;
+
+            &::after {
+                border-color: $title-color transparent transparent transparent;
+                right: 0;
+            }
+        }
+
+        .lymphome-select__title {
+            line-height: 1.2;
+            color: $title-color;
+            padding-left: 15px;
+        }
+    }
+}

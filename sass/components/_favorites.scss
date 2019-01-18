@@ -1,0 +1,47 @@
+.header__right {
+    &-favorites {
+        padding-top: 35px;
+        margin: 0px 5px;
+        position: relative;
+
+        &-counter {
+           background: $main-color;
+           border-radius: 50%;
+           position: absolute;
+           padding: 0px 0px;
+           bottom: 3px;
+           right: 0px;
+           font-size: 12px;
+           min-width: 16px;
+           height: 16px;
+           line-height: 16px;
+           text-align: center;
+        }
+    }
+    &-favorites a {
+       display: flex;
+       width: 57px;
+       height: 56px;
+       background: $primary;
+       border-radius: 50%;
+       justify-content: center;
+       align-items: center;
+       @include transition(all 0.4s ease);
+    }
+
+    &-favorites a:hover {
+       text-decoration: none;
+       opacity: 0.8;
+    }    
+
+    &-favorites a i {
+       color:#2e2e33; 
+       font-size: 18px;
+       @include transition(all 0.4s ease);
+    } 
+    
+    &-favorites a i:hover {
+       font-size: 20px;
+       color: $main-color;
+    }
+}

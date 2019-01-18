@@ -1,0 +1,68 @@
+.container {
+    @include media-breakpoint-up(xl) {
+        max-width: 1200px;
+    }    
+}
+
+@mixin make-container-padding() {
+    @include media-breakpoint-up(lg) {
+        padding-right: 67px;
+        padding-left: 67px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-right: 155px;
+        padding-left: 155px;
+    }
+}
+
+@mixin make-container-modal() {
+    @include media-breakpoint-up(lg) {
+        padding-right: 147px;
+        padding-left: 147px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-right: 235px;
+        padding-left: 235px;
+    }
+}
+
+//################
+
+// For each breakpoint, define the maximum width of the container in a media query
+@mixin make-padding-container($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints, $container-width: $container-padding-width) {
+    @each $breakpoint, $container-max-width in $max-widths {
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            padding-right: ($container-max-width - $container-width) / 2;
+            padding-left: ($container-max-width - $container-width) / 2;
+        }
+    }
+}
+
+.container-modal {
+    @include make-container();
+    @include make-container-max-widths();
+   // @include make-padding-container($container-max-widths, $grid-breakpoints, $container-modal-width);
+    padding-top: 115px;
+}
+
+.container-content {
+    .col-left {
+        //@include make-col-ready();
+        display: none;
+        @include media-breakpoint-up(lg) {
+            width: 400px;
+            display: block;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .col-right {
+       // @include make-col-ready();
+        @include media-breakpoint-up(lg) {
+            padding-left: 85px;
+            width: (1000px - 300px);
+        }
+    }
+}

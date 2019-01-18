@@ -1,0 +1,13 @@
+.logo {
+    padding-top: 42.4px;
+    padding-right: 21.8px;
+    padding-left: 35.8px;
+    display: block;
+    & > img {
+        display: block;
+        height: 50px;
+        @include media-breakpoint-up(lg) {
+            height: 48.2px;
+        }
+    }
+}

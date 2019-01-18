@@ -1,0 +1,100 @@
+
+.header__navigation {
+    & ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 25px 0px 0px;
+        justify-content: center;
+    }
+        
+    & ul li {
+            text-align: center;
+    }    
+        
+    &-link {
+        color: $header-link-color;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 0px 20.1px;
+        display: block;
+        @include transition(all 0.4s ease);
+    }
+
+    &-link:hover {
+        text-decoration: none;
+        color: $main-color;
+        
+    }
+        
+    &-link i {
+        display: block;
+        font-size: 40px;
+        color: #bfbfc5;
+        padding-bottom: 8px;
+        @include transition(all 0.4s ease);
+    } 
+
+    &-link:hover i {
+        color: $main-color;
+    }    
+}
+
+/*
+.navigation {
+    &__mobile {
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+    }
+
+    &__desktop {
+        display: none;
+        height: 100%;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+        }
+    }
+
+    &__main {
+        ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: flex-start;
+            list-style: none;
+        }
+
+        &-link {
+            display: inline-block;
+            padding: 18px 25px;
+            color: $navigation-links-color;
+
+            &--highlight {
+                background-color: $secondary;
+            }
+
+            &:hover,
+            &--active {
+                background-color: $primary !important;
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            &--home {
+                padding: 20px 22px 15px 23px;
+                font-size: 1.0625rem;
+                color: $primary;
+
+                &:hover {
+                    color: white;
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+}
+
+*/

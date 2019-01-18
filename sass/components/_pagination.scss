@@ -1,0 +1,33 @@
+.pagination {
+    position: fixed;
+    right: 0;
+    top: 60%;
+
+    &__prev,
+    &__next {
+        padding: 20px 22px;
+        color: white;
+        background-color: #007FCA;
+
+
+        &:hover {
+            text-decoration: none;
+            background-color: $primary;
+            color: white;
+        }
+
+        &--disabled {
+            background-color: $primary;
+            cursor: not-allowed;
+        }
+    }
+
+    &__total {
+        padding: 0 20px;
+        background-color: #007FCA;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 64px;
+    }
+}

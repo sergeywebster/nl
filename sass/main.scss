@@ -1,0 +1,99 @@
+// variables overwrites
+@import './variables';
+@import './fonts';
+@import './buttons';
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Custom utils
+@import './utils/container';
+
+
+//custom
+/*
+@import './components/sections';
+@import './components/teasers';
+@import './components/breadcrumbs';
+@import './components/teaser-menu';
+@import './components/newsletter';
+@import './components/hero';
+@import './components/lymphome-select';
+@import './components/pagination';
+@import './components/sidebar-menu';
+@import './components/page-info';
+*/
+// page
+@import 'page/page';
+@import './components/slider';
+@import './components/subscribtion';
+@import './components/search-form';
+@import './components/home-catalog';
+
+
+html,
+body {
+    margin: 0;
+    font-family: 'ff-dagny-web-pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: $primary;
+    height: 100%;
+}
+
+//tmp
+.content-white {
+    background-color: $secondary;
+}
+
+.content-grey {
+    background-color: $third;
+}
+
+
+.main_content__article {
+    & .container {
+        background: url('../images/Italian-cuisine-start.jpg') no-repeat left;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &-topic {
+        padding: 40px 45px 45px 45px;
+        background: #303035;
+        max-width: 479px;
+        max-height: 385px;
+        display: block;
+        color: $secondary;
+
+        &-subtitle {
+            font-size: 18px;
+            color: $main-color;
+            font-weight: bold;
+            padding-bottom: 9px;
+        }
+
+        &-title {
+            font-size: 38px;
+            line-height: 40px;
+            font-weight: bold;
+            padding-bottom: 21px;
+        }
+
+        &-text {
+            font-size: 18px;
+            padding-bottom: 36px;
+            padding-right: 40px;
+            line-height: normal;
+        }
+
+        &-link a {
+            padding: 10px 20px;
+            color: #fff;
+            border-color: #fff;
+        }
+    }
+}

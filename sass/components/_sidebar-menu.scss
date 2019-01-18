@@ -1,0 +1,37 @@
+.sidebar-menu {
+    padding: 30px;
+    background-color: $secondary;
+
+    &__list {
+        @include list-unstyled();
+        border-top: 1px solid rgba(#000000, 0.2);
+        margin-top: 15px;
+        padding-top: 10px;
+    }
+
+    &__item {
+        padding-bottom: 5px;
+    }
+
+    &__rootpage {
+        color: $title-color;
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: none;
+            color: $text-color;
+        }
+    }
+
+    &__subpage {
+        color: $menu-link-color;
+
+        &:hover {
+            text-decoration: none;
+            font-weight: bold;
+            color: $menu-link-color;
+        }
+    }
+
+
+}

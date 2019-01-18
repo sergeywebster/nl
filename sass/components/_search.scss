@@ -1,0 +1,32 @@
+.header__right {
+    &-search {
+        padding-top: 35px;
+        margin: 0px 5px;
+    }
+    &-search a {
+       display: flex;
+       width: 57px;
+       height: 56px;
+       background: $primary;
+       border-radius: 50%;
+       justify-content: center;
+       align-items: center;
+       @include transition(all 0.4s ease);
+    }
+
+    &-search a:hover {
+       text-decoration: none;
+       opacity: 0.8;
+    }    
+
+    &-search a i {
+       color:#2e2e33; 
+       font-size: 18px;
+       @include transition(all 0.4s ease);
+    } 
+    
+    &-search a i:hover {
+       font-size: 20px;
+       color: $main-color;
+    }
+}

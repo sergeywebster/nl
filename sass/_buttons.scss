@@ -1,0 +1,53 @@
+@mixin transition($transition...) {
+   -moz-transition:    $transition;
+   -o-transition:      $transition;
+   -webkit-transition: $transition;
+   transition:         $transition;
+}
+
+@mixin placeholder {
+   &.placeholder { @content; }
+   &:-moz-placeholder { @content; }
+   &::-moz-placeholder { @content; }
+   &::-webkit-input-placeholder { @content; }
+ }
+
+.pointer {
+   cursor: pointer;
+}
+
+.orange {
+   background: $main-color;
+}
+
+.green {
+    background: $green-color;
+}
+
+.button {
+    display: inline-block;
+    color: #7f7f8b;
+    text-transform: uppercase;
+    border: 1px solid #7f7f8b;
+    @include transition(all 0.4s ease);
+
+        &:hover {
+            text-decoration: none;
+            background: $button-hover;
+            box-shadow: $button-shaddow;
+            color: #fff;
+        }
+
+        &-light {
+           background: #fff;
+        }
+
+        &-dark {
+           background: #7f7f8b;
+        }
+
+        &-green {
+           background: #6fae4b;
+           color: #fff;
+        }
+}
