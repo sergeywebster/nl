@@ -1,0 +1,43 @@
+.main_content__article {
+    & .container {
+        background: url('../images/Italian-cuisine-start.jpg') no-repeat left;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &-topic {
+        padding: 40px 45px 45px 45px;
+        background: #303035;
+        max-width: 479px;
+        max-height: 385px;
+        display: block;
+        color: $secondary;
+
+        &-subtitle {
+            font-size: 18px;
+            color: $main-color;
+            font-weight: bold;
+            padding-bottom: 9px;
+        }
+
+        &-title {
+            font-size: 38px;
+            line-height: 40px;
+            font-weight: bold;
+            padding-bottom: 21px;
+        }
+
+        &-text {
+            font-size: 18px;
+            padding-bottom: 36px;
+            padding-right: 40px;
+            line-height: normal;
+        }
+
+        &-link a {
+            padding: 10px 20px;
+            color: #fff;
+            border-color: #fff;
+        }
+    }
+}
