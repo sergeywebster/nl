@@ -13,11 +13,20 @@
         display: block;
         color: $secondary;
 
+        @include media-breakpoint-down(md) {
+            padding: 20px;
+            max-width: 379px;
+        }
+
         &-subtitle {
             font-size: 18px;
             color: $main-color;
             font-weight: bold;
             padding-bottom: 9px;
+
+            @include media-breakpoint-down(xs) {
+                font-size: 15px;
+            }
         }
 
         &-title {
@@ -25,6 +34,15 @@
             line-height: 40px;
             font-weight: bold;
             padding-bottom: 21px;
+
+            @include media-breakpoint-down(md) {
+                font-size: 36px;
+            }
+
+            @include media-breakpoint-down(xs) {
+                font-size: 27px;
+                line-height: normal;
+            }
         }
 
         &-text {
@@ -32,6 +50,10 @@
             padding-bottom: 36px;
             padding-right: 40px;
             line-height: normal;
+
+            @include media-breakpoint-down(md) {
+                font-size: 16px;
+            }
         }
 
         &-link a {

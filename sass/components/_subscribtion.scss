@@ -2,6 +2,11 @@
     max-height: 262px;
     margin-bottom: 131px;
 
+    @include media-breakpoint-down(xs) {
+        max-height: 100%;
+        margin-bottom: 0px;
+    }
+
     &-subscribtion {
         max-width: 450px;
         height: 314px;
@@ -9,7 +14,12 @@
         padding: 48px 0px 25.4px 0px; 
         top: -25px;
         background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/subscribe-bg.jpg') no-repeat left;
-
+        
+        @include media-breakpoint-down(xs) {
+           top: 0px;
+           height: auto;
+           padding: 48px 0px;
+        }
     }
 }
 

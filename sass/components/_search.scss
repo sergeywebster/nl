@@ -2,7 +2,12 @@
     &-search {
         padding-top: 35px;
         margin: 0px 5px;
+
+        @include media-breakpoint-down(md) {
+           padding-top: 0px;
+        }
     }
+    
     &-search a {
        display: flex;
        width: 57px;
@@ -12,6 +17,11 @@
        justify-content: center;
        align-items: center;
        @include transition(all 0.4s ease);
+
+       @include media-breakpoint-down(md) {
+         width: 45px;
+         height: 45px;
+      }
     }
 
     &-search a:hover {

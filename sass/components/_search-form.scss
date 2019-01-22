@@ -1,8 +1,26 @@
 .main_content__forms-search {
     display: flex;
     top: -25px;
+
+    @include media-breakpoint-down(xs) {
+        display: block;
+        top: 0px;
+        padding: 55px 25px;
+    }
     
 }
+
+.forms-search__mobile-title {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #303035;
+    padding: 0px 18px;
+    margin-bottom: 42px;
+}
+
 .forms-search__form {
     display: flex;
     background: $primary;
@@ -15,6 +33,11 @@
 
     &-input {
         width: 94%;
+
+        @include media-breakpoint-down(xs) {
+            width: 89%; 
+        }
+
         &-title {
             font-size: 16px;
             color: #9d9db0;
@@ -33,7 +56,12 @@
 
             @include placeholder {
                opacity: 1;
-            }    
+            }  
+            
+            @include media-breakpoint-down(xs) {
+                height: 46px;
+                width: 100%;
+            }
         }
 
     
@@ -41,10 +69,19 @@
 
     &-button {
         width: 6%;
+
+        @include media-breakpoint-down(xs) {
+            width: 11%; 
+        }
+
         & button {
             background: none;
             border: none;
             padding: 13px 0px 0px 0px;
+
+            @include media-breakpoint-down(xs) {
+                padding: 8px 0px 0px 0px;  
+            }
         }
 
         & button i {

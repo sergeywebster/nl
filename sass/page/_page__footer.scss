@@ -5,31 +5,71 @@
 .footer__content {
     padding-top: 34px; 
 
-    &-logo img {
-        max-width: 150px;
-    }
+    &-logo  {
+        
+        img {
+            max-width: 150px;
+        }
+        
+        @include media-breakpoint-down(xs) {
+            text-align: center
+        }
+    }  
 
     &-socialbuttons ul {
         list-style: none; 
+        padding: 0px;
         display: flex;
         justify-content: flex-end;
 
+        @include media-breakpoint-down(xs) {
+            justify-content: center;
+        }
+
         & li {
             margin-right: 11.5px;
+            
+            &:last-child {
+                margin-right: 0px;
+            }
 
             & a {
                 display: block;
                 width: 41px;
                 height: 41px;
+                line-height: 49px;
+                text-align: center;
                 border-radius: 50%;
                 background: $primary;
+
+                & i {
+                    color: #7f7f80;
+                    font-size: 20px;
+                    @include transition(all 0.4s ease);
+                }
+
+                &:hover {
+                    text-decoration: none;
+
+                    & .icon-facebook {
+                        color: #3B5998;
+                    }
+
+                    & .icon-instagram {
+                        color: #e4405f;
+                    }
+
+                    & .icon-twitter {
+                        color: #55acee;
+                    }
+                }
             }
         }
     } 
 
     &-menu {
         display: flex;
-        padding: 31px 0px 50px 0px;
+        padding: 31px 15px 50px 15px;
         justify-content: space-between;
 
         &-title {
@@ -93,23 +133,49 @@
     }
 
     &-bottom {
-        display: flex;
-        padding: 23px 0px;
+        padding: 23px 15px;
+
+        @include media-breakpoint-down(xs) {
+            text-align: center;
+        }
 
         &-text {
             font-size: 16px;
             line-height: 2.5;
             color: #717171;
+
+            @include media-breakpoint-down(xs) {
+                font-size: 13px;
+                line-height: 1.23;
+                padding: 10px 30px;
+                order: 1;
+            }
         }
 
         &-links {
             text-align: right;
+
+            @include media-breakpoint-down(xs) {
+                text-align: center;
+                padding: 0px 30px;
+            }
 
 
             & a {
                 font-size: 16px;
                 line-height: 2.5;
                 color: #717171;
+                margin-right: 63px;
+
+                @include media-breakpoint-down(xs)  {
+                    font-size: 13px;
+                    line-height: normal;
+                }
+
+                &:last-child {
+                    margin-right: 0px;
+                }
+                
             }
         }
     }

@@ -1,11 +1,39 @@
 .header {
     min-height: 122px;
 
+    @include media-breakpoint-down(md) {
+       display: flex;
+       align-items: center;
+       min-height: 90px;
+    }    
+
     &__right {
         display: flex;
         justify-content: flex-end;
     }
 }
+
+.mobile__menu {
+
+    & a {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: #eaeaef;
+        display: block;
+        line-height: 54px;
+        text-align: center;
+        
+        & i {
+            color: #7f7f8b; 
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}
+
+
+
 @import '../components/logo';
 @import '../components/navigation';
 @import '../components/favorites';

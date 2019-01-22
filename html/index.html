@@ -6,15 +6,15 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Document</title>
         <link rel="stylesheet" href="../css/main.min.css" />
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>-->
         <script src="../javascript/libs/jquery/jquery.min.js"></script>
         <script src="../javascript/libs/popper/popper.min.js"></script>
         <script src="../javascript/libs/bootstrap/bootstrap.min.js"></script>
         <!-- <script src="../javascript/scripts.min.js"></script> -->
         <script src="../javascript/scripts.min.js"></script>
         
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="../javascript/main.js"></script>
+        <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="../javascript/main.js"></script>-->
     </head>
     <body>
         
@@ -23,12 +23,17 @@
             <header class="header content-white">
                 <div class="container">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-3 d-lg-none">
+                            <div class="mobile__menu">
+                                <a href="#"><i class="icon-menu"></i></a>
+                            </div>
+                        </div>    
+                        <div class="col-lg-3 col-6">
                             <div class="header__logo">
-                                <a href="#" class="logo"><img src="../images/logo/logo.svg" alt="logo"></a>
+                                <a href="#" class="logo"><img src="../images/logo/logo.svg" alt="logo"><img src="../images/logo/logo-extension.jpg" class="logo-extension"></a>
                             </div>
                         </div>
-                        <div class="col-lg-auto">
+                        <div class="col-6 d-none d-lg-block">
                             <div class="header__navigation">
                                 <ul>
                                     <li><a href="" class="header__navigation-link"><i class="icon-sauce"></i> Soy Sauce</a></li>
@@ -39,15 +44,15 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-3">
                             <div class="header__right">
                                 <div class="header__right-favorites">
                                     <a href="#" class="header__right-favorites-link"><i class="icon-heart"></i><span class="header__right-favorites-counter">2</span></a>
                                 </div>
-                                <div class="header__right-search">
+                                <div class="header__right-search d-none d-sm-block">
                                     <a href="#" class="header__right-search-link"><i class="icon-search"></i></a>
                                 </div>
-                                <div class="header__right-language">
+                                <div class="header__right-language d-none d-sm-block">
                                     <a href="#" class="header__right-language-link"><i class="icon-earth"></i>EN <span class="arrow-down"></span></a>
                                 </div>
                             </div>
@@ -73,7 +78,7 @@
                 </div>
                 <div class="main_content__slider content-white">
                     <div class="container">
-                        <ul class="main_content__slider-list row">
+                        <ul class="main_content__slider-list row d-none d-sm-block">
                             <li>
                                 <div class="slider-list__product">
                                     <div class="slider-list__product-image">
@@ -102,8 +107,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
-                                <div class="slider-list__product">
+                            <li class="active">
+                                <div class="slider-list__product slider-list__product-active">
                                     <div class="slider-list__product-image">
                                         <img src="../images/slider/csm_NEW-VN_300ml_EU_klein_b6caf6663a.jpg">
                                     </div>
@@ -134,20 +139,6 @@
                                 <div class="slider-list__product">
                                     <div class="slider-list__product-image">
                                         <img src="../images/slider/csm_NEW-VN_300ml_EU_klein_b6caf6663a.jpg">
-                                    </div>
-                                    <div class="slider-list__product-info">
-                                        <div class="product-info__title">Naturally Brewed Soy Sauce</div>
-                                        <div class="product-info__text">Our classic product - Naturally Brewed Soy Sauce - is the perfect cooking or table-top seasoning. It’s also suitable for all kinds of dishes - not just Asian ones. Try it out with your favourite foods - Italian pizza, American burgers, salad and even desserts.</div>
-                                        <div class="product-info__link">
-                                            <a href="#" class="button">read more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider-list__product">
-                                    <div class="slider-list__product-image">
-                                        <img src="../images/slider/csm_NEW-TE_250ml_EN_freigestellt_385d416723.jpg">
                                     </div>
                                     <div class="slider-list__product-info">
                                         <div class="product-info__title">Naturally Brewed Soy Sauce</div>
@@ -175,9 +166,10 @@
                                 </div>
                             </div>
                             <div class="main_content__forms-search col">
+                                <div class="forms-search__mobile-title d-block d-sm-none">What would you like to cook today?</div>
                                 <form class="forms-search__form">
                                     <div class="forms-search__form-input">
-                                        <div class="forms-search__form-input-title">What would you like to cook today?</div>
+                                        <div class="forms-search__form-input-title d-none d-sm-block">What would you like to cook today?</div>
                                         <input type="text" placeholder="Sushi">
                                     </div>
                                     <div class="forms-search__form-button"><button class="pointer"><i class="icon-search"></i></button></div>
@@ -188,33 +180,175 @@
                 </div>
                 <div class="section_content container">
                     <div class="teazer row">
-                        <div class="teazer__body teazer__body-cover col-lg-3">
+                        <div class="teazer__body teazer__body-cover col">
                             <div class="teazer__cover orange">
-                                <div class="teazer__title">All about Sushi</div>
+                                <div class="teazer__cover-title">All about Sushi</div>
                                 <div class="teazer__arrow"><a href="#" class="teazer__arrow-next"><i class="icon-keyboard_arrow_right"></i></a></div>
                             </div>
                         </div>
-                        <div class="teazer__body col-lg-3">
+                        <div class="teazer__body col">
                             <div class="teazer__product">
-                                <a class="teazer__image"><img src="../images/teasers/csm_Lachsfiletwu__rfel_mit_Ku__rbis-Pasta_870x300_05_d449cddd08.jpg"><span class="teazer__favorite"><i class="icon-heart-o"></i></span></a>
-                                <div class="teazer__title">Fried chicken with soy sauce, orange and ginger</div>
+                                <div class="teazer__imgblock">
+                                    <a href="#" class="teazer__imgblock-image"><img src="../images/teasers/csm_sushi_garnelen__01_b942ff979d.jpg"></a>
+                                    <a href="#" class="teazer__imgblock-favorite"><i class="icon-heart-o"></i></a>
+                                </div>
+                                <div class="teazer__product-title">Fried chicken with soy sauce, orange and ginger</div>
                                 <div class="teazer__features">
-                                    <div class="teazer__features-cook">30m</div>
-                                    <div class="teazer_features-kall">454kJ / 108kcal</div>
+                                    <div class="teazer__features-cook"><i class="icon-time"></i> 30m</div>
+                                    <div class="teazer_features-kall"><i class="icon-fire"></i> 454kJ / 108kcal</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="teazer__body col-lg-3">
+                        <div class="teazer__body col">
                             <div class="teazer__product">
-                                <a class="teazer__image"><img src="../images/teasers/csm_sushi_garnelen__01_b942ff979d.jpg"><span class="teazer__favorite"><i class="icon-heart-o"></i></span></a>
-                                <div class="teazer__title">Fried chicken with soy sauce, orange and ginger</div>
+                                <div class="teazer__imgblock">
+                                    <a href="#" class="teazer__imgblock-image"><img src="../images/teasers/csm_sushi_garnelen__01_b942ff979d.jpg"></a>
+                                    <a href="#" class="teazer__imgblock-favorite"><i class="icon-heart-o"></i></a>
+                                </div>
+                                <div class="teazer__product-title">Fried chicken with soy sauce, orange and ginger</div>
                                 <div class="teazer__features">
-                                    <div class="teazer__features-cook">30m</div>
-                                    <div class="teazer_features-kall">454kJ / 108kcal</div>
+                                    <div class="teazer__features-cook"><i class="icon-time"></i> 30m</div>
+                                    <div class="teazer_features-kall"><i class="icon-fire"></i> 454kJ / 108kcal</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="teazer__body col-lg-3"></div>
+                        <div class="teazer__body col d-none d-lg-block"></div>
+                    </div>
+                </div>
+                <div class="section_content container">
+                    <div class="teazer row">
+                        <div class="teazer__body col-lg-3 d-none d-lg-block"></div>
+                        <div class="teazer__body col-lg-6 col-md-8">
+                            <div class="teazer__video">
+                                <div class="teazer__video-container">
+                                    <iframe width="100%" height="236" src="https://www.youtube.com/embed/vWUcdSxoSZg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <div class="teazer__label teazer__video-label dark-label">Cooking</div>
+                                </div>
+                                <div class="teazer__video-description">
+                                    <div class="teazer__video-description-title">Video-Anleitung: Sushi</div>
+                                    <div class="teazer__video-description-text">Die meisten Gemüsesorten sind mittlerweile ganzjährig erhältlich. Und trotzdem: frisch vom Feld, am besten noch aus der Region …</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teazer__body teazer__body-cover col-lg-3 col-md-4">
+                            <div class="teazer__cover-right orange">
+                                <div class="teazer__label teazer__cover-right-label light-label">Sushi</div>
+                                <div class="teazer__cover-right-title">UNESCO cultural heritage status for Japanese cuisine</div>
+                                <div class="teazer__cover-right-text">Traditional Japanese cuisine, or washoku as it is known, was designated as UNESCO Intangible Cultural Heritage of Humanity in December 2013. Washoku involves the use of natural and seasonal …</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section_content container">
+                    <div class="teazer row">
+                        <div class="teazer__body col">
+                            <div class="teazer__promo">
+                                <a href="#" class="teazer__promo-image"><img src="../images/slider/csm_NEW-TE_250ml_EN_freigestellt_385d416723.jpg" width="95px"></a>
+                                <div class="teazer__promo-title">Sushi & Sashimi Soy Sauce</div>
+                            </div>
+                        </div>
+                        <div class="teazer__body col">
+                            <div class="teazer__promo">
+                                <a href="#" class="teazer__promo-image"><img src="../images/slider/csm_NEW-VN_300ml_EU_klein_b6caf6663a.jpg" width="95px"></a>
+                                <div class="teazer__promo-title">Sushi & Sashimi Soy Sauce</div>
+                            </div>
+                        </div>
+                        <div class="teazer__body col">
+                            <div class="teazer__lifestyle">
+                                <a href="#" class="teazer__lifestyle-image"><img src="../images/teasers/csm_Quick_Bolognese_with_umami_kick_960259faa3.jpg"></a>
+                                <div class="teazer__label teazer__lifestyle-label green-label">Lifestyle</div>
+                                <div class="teazer__lifestyle-title">Weltkulturerbe japanische Küche</div>
+                                <div class="teazer__lifestyle-text">Die meisten Gemüsesorten sind mittlerweile ganzjährig erhältlich. Und trotzdem: frisch vom Feld, am besten noch aus der Region …</div>
+                            </div>
+                        </div>
+                        <div class="teazer__body col d-none d-lg-block"></div>
+                    </div>
+                </div>
+                <div class="section_content container">
+                    <div class="teazer row">
+                        <div class="teazer__body teazer__body-cover col">
+                            <div class="teazer__cover green">
+                                <div class="teazer__cover-title">Veggie is trendy</div>
+                                <div class="teazer__arrow"><a href="#" class="teazer__arrow-next"><i class="icon-keyboard_arrow_right"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="teazer__body col">
+                            <div class="teazer__product">
+                                <div class="teazer__imgblock">
+                                    <a href="#" class="teazer__imgblock-image"><img src="../images/teasers/csm_Lachsfiletwu__rfel_mit_Ku__rbis-Pasta_870x300_05_d449cddd08.jpg"></a>
+                                    <a href="#" class="teazer__imgblock-favorite"><i class="icon-heart-o"></i></a>
+                                </div>
+                                <div class="teazer__product-title">Fried chicken with soy sauce, orange and ginger</div>
+                                <div class="teazer__features">
+                                    <div class="teazer__features-cook"><i class="icon-time"></i> 30m</div>
+                                    <div class="teazer_features-kall"><i class="icon-fire"></i> 454kJ / 108kcal</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teazer__body col">
+                            <div class="teazer__product">
+                                <div class="teazer__imgblock">
+                                    <a href="#" class="teazer__imgblock-image"><img src="../images/teasers/csm_sushi_chirashi_dispenserklein_d57711a1b4.jpg"></a>
+                                    <a href="#" class="teazer__imgblock-favorite"><i class="icon-heart-o"></i></a>
+                                </div>
+                                <div class="teazer__product-title">Fried chicken with soy sauce, orange and ginger</div>
+                                <div class="teazer__features">
+                                    <div class="teazer__features-cook"><i class="icon-time"></i> 30m</div>
+                                    <div class="teazer_features-kall"><i class="icon-fire"></i> 454kJ / 108kcal</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teazer__body teazer__body-cover col">
+                            <div class="teazer__cover-right green">
+                                <div class="teazer__label teazer__cover-right-label light-label">Sushi</div>
+                                <div class="teazer__cover-right-title">UNESCO cultural heritage status for Japanese cuisine</div>
+                                <div class="teazer__cover-right-text">Traditional Japanese cuisine, or washoku as it is known, was designated as UNESCO Intangible Cultural Heritage of Humanity in December 2013. Washoku involves the use of natural and seasonal …</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section_content container">
+                    <div class="teazer row">
+                        <div class="teazer__body col"></div>
+                        <div class="teazer__body col">
+                            <div class="teazer__video video-small">
+                                <div class="teazer__video-container">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vWUcdSxoSZg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <div class="teazer__label teazer__video-label dark-label">Cooking</div>
+                                </div>
+                                <div class="teazer__video-description">
+                                    <div class="teazer__video-description-title">Video-Anleitung: Sushi</div>
+                                    <div class="teazer__video-description-text">Die meisten Gemüsesorten sind mittlerweile ganzjährig erhältlich. Und trotzdem: frisch vom Feld, am besten noch aus der Region …</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teazer__body col">
+                            <div class="teazer__lifestyle">
+                                <a href="#" class="teazer__lifestyle-image"><img src="../images/teasers/csm_Quick_Bolognese_with_umami_kick_960259faa3.jpg"></a>
+                                <div class="teazer__label teazer__lifestyle-label green-label">Lifestyle</div>
+                                <div class="teazer__lifestyle-title">Weltkulturerbe japanische Küche</div>
+                                <div class="teazer__lifestyle-text">Die meisten Gemüsesorten sind mittlerweile ganzjährig erhältlich. Und trotzdem: frisch vom Feld, am besten noch aus der Region …</div>
+                            </div>
+                        </div>
+                        <div class="teazer__body col d-none d-lg-block"></div>
+                    </div>
+                </div>
+                <div class="section_content container">
+                    <div class="teazer row">
+                        <div class="teazer__body col">
+                            <div class="teazer__promo">
+                                <a href="#" class="teazer__promo-image"><img src="../images/slider/csm_NEW-TE_250ml_EN_freigestellt_385d416723.jpg" width="95px"></a>
+                                <div class="teazer__promo-title">Sushi & Sashimi Soy Sauce</div>
+                            </div>
+                        </div>
+                        <div class="teazer__body col">
+                            <div class="teazer__promo">
+                                <a href="#" class="teazer__promo-image"><img src="../images/slider/csm_NEW-VN_300ml_EU_klein_b6caf6663a.jpg" width="95px"></a>
+                                <div class="teazer__promo-title">Sushi & Sashimi Soy Sauce</div>
+                            </div>
+                        </div>
+                        <div class="teazer__body col"></div>
+                        <div class="teazer__body col d-none d-lg-block"></div>
                     </div>
                 </div>
             </div>
@@ -225,59 +359,69 @@
             <div class="footer__content content-white">
                 <div class="container">
                     <div class="row"> 
-                        <div class="footer__content-logo col">
-                            <img src="../images/logo/logo.svg" alt="logo">
-                        </div>
-                        <div class="footer__content-socialbuttons col">
-                            <ul>
-                                <li class="socialbuttons__facebook"><a href="#"></a></li>
-                                <li class="socialbuttons__instagram"><a href="#"></a></li>
-                                <li class="socialbuttons__twitter"><a href="#"></a></li>
-                            </ul>
-                        </div>
+                        
+                        
                     </div>
                     <div class="row">
-                        <div class="footer__content-menu col">
-                            <div class="footer__content-menu-list">
-                                <div class="footer__content-menu-title">For Business</div>
-                                <ul>
-                                    <li><a href="#">Food Service</a></li>
-                                    <li><a href="#">Industrie</a></li>
-                                </ul>
+                        <div class="col">
+                            <div class="footer__content-logo">
+                                <img src="../images/logo/logo.svg" alt="logo">
                             </div>
-                            <div class="footer__content-menu-list">
-                                <div class="footer__content-menu-title">Information</div>
-                                <ul>
-                                    <li><a href="#">Contact</a></li>
-                                    <li><a href="#">Press</a></li>
-                                    <li><a href="#">FAQ</a></li>
-                                </ul>
-                            </div>
-                            <div class="footer__content-menu-list">
-                                <div class="footer__content-menu-title">Company</div>
-                                <ul>
-                                    <li><a href="#">About Kikkoman</a></li>
-                                    <li><a href="#">Manufacturing</a></li>
-                                    <li><a href="#">Food Service</a></li>
-                                </ul>
+                            <div class="row">
+                                <div class="footer__content-menu col">
+                                    <div class="footer__content-menu-list">
+                                        <div class="footer__content-menu-title">For Business</div>
+                                        <ul>
+                                            <li><a href="#">Food Service</a></li>
+                                            <li><a href="#">Industrie</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer__content-menu-list">
+                                        <div class="footer__content-menu-title">Information</div>
+                                        <ul>
+                                            <li><a href="#">Contact</a></li>
+                                            <li><a href="#">Press</a></li>
+                                            <li><a href="#">FAQ</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer__content-menu-list d-none d-sm-block">
+                                        <div class="footer__content-menu-title">Company</div>
+                                        <ul>
+                                            <li><a href="#">About Kikkoman</a></li>
+                                            <li><a href="#">Manufacturing</a></li>
+                                            <li><a href="#">Food Service</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="footer__content-subscribtion col">
-                            <div class="footer__content-subscribtion-form">
-                                <div class="footer__content-subscribtion-form-title">Subscribe weekly recipes</div>
-                                <form>
-                                    <input type="post" placeholder="Enter your Email address">
-                                </form>
+                        <div class="col">
+                            <div class="footer__content-socialbuttons">
+                                <ul>
+                                    <li class="socialbuttons__facebook"><a href="#"><i class="icon-facebook"></i></a></li>
+                                    <li class="socialbuttons__instagram"><a href="#"><i class="icon-instagram"></i></a></li>
+                                    <li class="socialbuttons__twitter"><a href="#"><i class="icon-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="footer__content-subscribtion">
+                                <div class="footer__content-subscribtion-form">
+                                    <div class="footer__content-subscribtion-form-title">Subscribe weekly recipes</div>
+                                    <form>
+                                        <input type="post" placeholder="Enter your Email address">
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="footer__content-bottom container">
-                <div class="footer__content-bottom-text">Kikkoman is a registered trademark of Kikkoman Corporation, Japan.</div>
-                <div class="footer__content-bottom-links">
-                    <a href="#">Legal & Privacy</a>
-                    <a href="#">Imprint</a>
+                <div class="row">
+                    <div class="footer__content-bottom-text col-md-6 col-12">Kikkoman is a registered trademark of Kikkoman Corporation, Japan.</div>
+                    <div class="footer__content-bottom-links col-md-6 col-12">
+                        <a href="#">Legal & Privacy</a>
+                        <a href="#">Imprint</a>
+                    </div>
                 </div>
             </div>
         </footer>

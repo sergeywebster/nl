@@ -1,6 +1,14 @@
 .main_content__slider-list {
     padding: 0px 0px 121px 0px;
     margin: 0px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+
+    & li.active {
+        flex-basis: 50%;
+    }
 }
 
 .slider-list__product {
@@ -10,30 +18,35 @@
     flex-wrap: nowrap; 
 
     &-image {
-        max-width: 150px;
+        max-width: 55px;
+        margin-right: 20px;
 
         & img {
-            width: 40%;
+            width: 100%;
         }
     }
 
-    .slick-current &-image {
+    &-active &-image {
         max-width: 215px;
         @include transition(all 0.4s ease);
 
         & img {
-            width: 85%;
+            width: 100%;
         }
     }
 
     &-info {
         display: none;
-    }
+    } 
 
     .slick-current &-info {
         display: block;
         width: 361px;
         margin: 0px 36px;
+    }
+
+    &-active &-info {
+        display: block;  
     }
 
 }

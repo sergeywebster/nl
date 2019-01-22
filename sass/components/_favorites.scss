@@ -4,6 +4,10 @@
         margin: 0px 5px;
         position: relative;
 
+        @include media-breakpoint-down(md) {
+           padding: 0px;
+        }
+
         &-counter {
            background: $main-color;
            border-radius: 50%;
@@ -27,6 +31,11 @@
        justify-content: center;
        align-items: center;
        @include transition(all 0.4s ease);
+       
+       @include media-breakpoint-down(md) {
+          width: 45px;
+          height: 45px;
+       }
     }
 
     &-favorites a:hover {

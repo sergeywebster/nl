@@ -1,6 +1,10 @@
 .header__right {
     &-language {
         padding: 13px 0px 0px 50px;
+
+        @include media-breakpoint-down(lg) {
+            padding: 13px 0px 0px 10px; 
+        }
     }
     &-language a {
         color: #7f7f8b;
