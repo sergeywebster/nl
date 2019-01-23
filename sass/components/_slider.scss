@@ -114,10 +114,18 @@
         top: 50%;
         z-index: 1;
 
-        & i {
-            color: #2e2e33;
+        @include media-breakpoint-down(xs) {
+            background: none;
         }
 
+        & i {
+            color: #2e2e33;
+
+            @include media-breakpoint-down(xs) {
+                opacity: 0.3;
+                font-size: 28px;
+            }
+        }
 
         &:hover {
             text-decoration: none;
@@ -132,10 +140,18 @@
         &-left {
             transform: scale(-1, 1);
             left: 18%;
+
+            @include media-breakpoint-down(lg) {
+                left: 16%;
+            }    
         }
 
         &-right {
             right: 18%;
+
+            @include media-breakpoint-down(lg) {
+                right: 16%;
+            } 
         }
     }
 }
