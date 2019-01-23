@@ -30,12 +30,27 @@
     text-transform: uppercase;
     border: 1px solid #7f7f8b;
     @include transition(all 0.4s ease);
+    position: relative;
+    overflow: hidden;
 
         &:hover {
             text-decoration: none;
             background: $button-hover;
             box-shadow: $button-shaddow;
             color: #fff;
+        }
+
+        &:active::before {
+         content: '';
+         position: absolute;
+         display: block;
+         background: #fff;
+         width: 91px;
+         height: 91px;
+         border-radius: 50%;
+         opacity: 0.2;
+         left: -7px;
+         top: -7px;
         }
 
         &-light {
@@ -49,5 +64,10 @@
         &-green {
            background: #6fae4b;
            color: #fff;
+        }
+
+        &-disabled {
+           color: #7f7f8b;
+           opacity: 0.2;
         }
 }

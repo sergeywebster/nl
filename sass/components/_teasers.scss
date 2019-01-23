@@ -56,6 +56,11 @@
         background: #fff;
         text-align: center;
         padding: 11px;
+        @include transition(all 0.4s ease);
+
+        &:hover {
+            box-shadow: $box-hover;
+        }
 
         &-title {
             font-size: 16px;
@@ -233,6 +238,11 @@
         background: #fff;
         text-align: center;
         align-self: stretch;
+        @include transition(all 0.4s ease);
+
+        &:hover {
+            box-shadow: $box-hover;
+        }
 
         &-image {
             display: block;

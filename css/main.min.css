@@ -107,13 +107,27 @@
   border: 1px solid #7f7f8b;
   -o-transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden; }
   .button:hover {
     text-decoration: none;
     background: #7f7f8b;
     -webkit-box-shadow: 8px 8px 0px rgba(127, 127, 139, 0.2);
             box-shadow: 8px 8px 0px rgba(127, 127, 139, 0.2);
     color: #fff; }
+  .button:active::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background: #fff;
+    width: 91px;
+    height: 91px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    opacity: 0.2;
+    left: -7px;
+    top: -7px; }
   .button-light {
     background: #fff; }
   .button-dark {
@@ -121,6 +135,9 @@
   .button-green {
     background: #6fae4b;
     color: #fff; }
+  .button-disabled {
+    color: #7f7f8b;
+    opacity: 0.2; }
 
 /*!
  * Bootstrap v4.2.1 (https://getbootstrap.com/)
@@ -9728,7 +9745,18 @@ a.text-dark:hover, a.text-dark:focus {
   .teazer__product {
     background: #fff;
     text-align: center;
-    padding: 11px; }
+    padding: 11px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+    @media screen and (prefers-reduced-motion: reduce) {
+      .teazer__product {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none; } }
+    .teazer__product:hover {
+      -webkit-box-shadow: 0 3px 8px rgba(41, 47, 55, 0.1);
+              box-shadow: 0 3px 8px rgba(41, 47, 55, 0.1); }
     .teazer__product-title {
       font-size: 16px;
       font-weight: bold;
@@ -9873,7 +9901,18 @@ a.text-dark:hover, a.text-dark:focus {
     text-align: center;
     -webkit-align-self: stretch;
         -ms-flex-item-align: stretch;
-            align-self: stretch; }
+            align-self: stretch;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+    @media screen and (prefers-reduced-motion: reduce) {
+      .teazer__promo {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none; } }
+    .teazer__promo:hover {
+      -webkit-box-shadow: 0 3px 8px rgba(41, 47, 55, 0.1);
+              box-shadow: 0 3px 8px rgba(41, 47, 55, 0.1); }
     .teazer__promo-image {
       display: block;
       padding-bottom: 30px; }
