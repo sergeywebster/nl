@@ -9350,6 +9350,14 @@ a.text-dark:hover, a.text-dark:focus {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
+  .main_content__slider-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+    position: relative; }
 
 .slider-list__product {
   max-width: 650px;
@@ -9415,6 +9423,26 @@ a.text-dark:hover, a.text-dark:focus {
   display: inline-block;
   padding: 11px 28px;
   text-transform: none; }
+
+.slider__arrow {
+  width: 35px;
+  height: 35px;
+  line-height: 39px;
+  background: #eaeaef;
+  text-align: center;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  font-size: 23px;
+  position: absolute;
+  top: 50%;
+  z-index: 1; }
+  .slider__arrow-left {
+    -webkit-transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+    left: 18%; }
+  .slider__arrow-right {
+    right: 18%; }
 
 .main_content__forms {
   max-height: 262px;

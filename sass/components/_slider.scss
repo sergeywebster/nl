@@ -10,7 +10,13 @@
         & li.active {
             
         } 
-    }    
+    }  
+    
+    &-container {
+        @include make-container();
+        max-width: 1200px;
+        position: relative;
+    }
 }
 
 .slider-list__product {
@@ -92,6 +98,30 @@
         padding: 11px 28px;
         text-transform: none;
     } 
-}      
+}
+
+.slider {
+    &__arrow {
+        width: 35px;
+        height: 35px;
+        line-height: 39px;
+        background: #eaeaef;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 23px;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+
+        &-left {
+            transform: scale(-1, 1);
+            left: 18%;
+        }
+
+        &-right {
+            right: 18%;
+        }
+    }
+}
 
    
