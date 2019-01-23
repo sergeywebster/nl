@@ -9345,6 +9345,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 .main_content__slider {
   padding-bottom: 100px; }
+  @media (max-width: 575.98px) {
+    .main_content__slider {
+      padding-bottom: 35px; } }
   .main_content__slider-list {
     padding: 70px 0px 20px 0px;
     margin-bottom: 0px;
