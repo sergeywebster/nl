@@ -188,9 +188,13 @@
             line-height: 2.5;
             color: #717171;
 
+            @include media-breakpoint-down(md) {
+                line-height: normal;
+            }
+
             @include media-breakpoint-down(xs) {
                 font-size: 13px;
-                line-height: 1.23;
+                line-height: 1.23em;
                 padding: 10px 30px;
                 order: 1;
             }
