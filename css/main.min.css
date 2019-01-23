@@ -9427,6 +9427,7 @@ a.text-dark:hover, a.text-dark:focus {
 .slider__arrow {
   width: 35px;
   height: 35px;
+  display: block;
   line-height: 39px;
   background: #eaeaef;
   text-align: center;
@@ -9436,6 +9437,21 @@ a.text-dark:hover, a.text-dark:focus {
   position: absolute;
   top: 50%;
   z-index: 1; }
+  .slider__arrow i {
+    color: #2e2e33; }
+  .slider__arrow:hover {
+    text-decoration: none;
+    background: #7f7f8b;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+    @media screen and (prefers-reduced-motion: reduce) {
+      .slider__arrow:hover {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none; } }
+    .slider__arrow:hover i {
+      color: #fff; }
   .slider__arrow-left {
     -webkit-transform: scale(-1, 1);
         -ms-transform: scale(-1, 1);

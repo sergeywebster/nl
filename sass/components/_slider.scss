@@ -104,6 +104,7 @@
     &__arrow {
         width: 35px;
         height: 35px;
+        display: block;
         line-height: 39px;
         background: #eaeaef;
         text-align: center;
@@ -112,6 +113,21 @@
         position: absolute;
         top: 50%;
         z-index: 1;
+
+        & i {
+            color: #2e2e33;
+        }
+
+
+        &:hover {
+            text-decoration: none;
+            background: $button-hover;
+            @include transition(all 0.4s ease);
+
+            & i {
+                color: #fff;
+            }
+        }
 
         &-left {
             transform: scale(-1, 1);
